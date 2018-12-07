@@ -1,5 +1,7 @@
 package com.design.pattern.iterator;
 
+import java.util.ArrayList;
+
 /**
  * 这是一个表示书架集合的类，所以实现了 Aggregate 接口。
  *
@@ -8,20 +10,21 @@ package com.design.pattern.iterator;
  */
 public class BookShelf implements Aggregate {
     //这里使用可以自动扩容的 ArrayList 来替代数组来存储 Book。
-    private Book[] books;
+    private ArrayList<Book> books;
 
     private int last = 0;
 
     public BookShelf(int initialSize) {
-        this.books = new Book[initialSize];
+        this.books = new ArrayList<Book>(initialSize) {
+        };
     }
 
     public Book getBookAt(int index) {
-        return (Book) books[index];
+        return books.get(index);
     }
 
     public void appendBook(Book book) {
-        books[last] = book;
+        books.add(book);
         last++;
     }
 
@@ -31,6 +34,6 @@ public class BookShelf implements Aggregate {
 
     @Override
     public Iterator iterator() {
-        return null;
+        return new BookShelfIterator(this);
     }
 }

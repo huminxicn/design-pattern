@@ -13,11 +13,14 @@ public class Main {
         bookShelf.appendBook(new Book("Bible"));
         bookShelf.appendBook(new Book("Cinderella"));
         bookShelf.appendBook(new Book("Daddy Long Legs"));
+        bookShelf.appendBook(new Book("East of Eden"));
+        bookShelf.appendBook(new Book("Frankenstein"));
 
         Iterator iterator = new BookShelfIterator(bookShelf);
         while (iterator.hasNext()) {
             Book book = (Book) iterator.next();
             System.out.println(book.getName());
         }
+
     }
 }
