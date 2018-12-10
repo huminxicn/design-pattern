@@ -1,4 +1,5 @@
 @startuml
+title:iterator
 
 interface Aggregate
 interface Iterator

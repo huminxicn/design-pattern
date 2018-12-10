@@ -1,7 +1,7 @@
 package com.design.pattern.iterator;
 
 /**
- * 包含 main 方法的类。
+ * 构建书架，然后遍历，并打印书名。
  *
  * @author hf huminxi2017@gmail.com
  * @version on 2018/12/7 08:56
