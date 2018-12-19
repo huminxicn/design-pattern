@@ -1,0 +1,24 @@
+@startuml
+
+title com pattern
+
+class Director
+abstract class Builder
+class ConcreteBuilder
+class Main
+
+Builder --o Director
+Builder <|-- ConcreteBuilder
+Main -> Director:uses >
+
+Director : com
+Director : construct()
+Builder : builderPart1()
+Builder : builderPart2()
+Builder : builderPart3()
+ConcreteBuilder : builderPart1()
+ConcreteBuilder : builderPart2()
+ConcreteBuilder : builderPart3()
+ConcreteBuilder : getResult()
+
+@enduml

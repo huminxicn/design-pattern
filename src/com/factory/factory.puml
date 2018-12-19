@@ -1,0 +1,28 @@
+@startuml
+title factory pattern
+
+
+abstract class Factory
+abstract class Product
+class TelevisionFactory
+class Television
+
+Factory <|-- TelevisionFactory
+Product <|-- Television
+Factory -> Product:creates >
+TelevisionFactory -> Television:creates >
+
+Factory : create()
+Factory : createProduct()
+Factory : registerProduct()
+Product : use()
+TelevisionFactory : televisions
+TelevisionFactory : createProduct()
+TelevisionFactory : registerProduct()
+TelevisionFactory : getTelevisions()
+Television : brand
+Television : use()
+Television : getBrand()
+
+
+@enduml

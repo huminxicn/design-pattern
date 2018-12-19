@@ -1,0 +1,20 @@
+@startuml
+title : adapter pattern(delegate)
+
+interface DirectCurrent
+class AlternateCurrent
+class AlternateToDirect
+class Main
+
+AlternateToDirect  --|> DirectCurrent : extends >
+AlternateCurrent  --o AlternateToDirect : < has
+Main -> DirectCurrent : Use
+
+DirectCurrent : use12V()
+AlternateToDirect : alternateCurrent
+AlternateToDirect : use12V()
+AlternateCurrent : use220V()
+
+
+
+@enduml
