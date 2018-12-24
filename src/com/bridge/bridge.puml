@@ -1,0 +1,44 @@
+@startuml
+
+title Bridge Pattern
+
+class Abstraction
+abstract Implementor
+class RefinedAbstraction
+class ConcreteImplementor
+
+Abstraction <|-- RefinedAbstraction
+Implementor <|-- ConcreteImplementor
+'Abstraction o-- Implementor
+Abstraction -> Implementor : use
+
+Abstraction : impl
+Abstraction : method1()
+Abstraction : method2()
+Abstraction : method3()
+RefinedAbstraction : refinedMethodA()
+RefinedAbstraction : refinedMethodB()
+Implementor : implMethodX()
+Implementor : implMethodY()
+ConcreteImplementor : implMethodX()
+ConcreteImplementor : implMethodY()
+
+legend
+Bridge 模式中有以下登场角色:
+
+- Abstraction
+  + Display，该角色位于『类的功能层次结构』的最上层。它使用 Implementor 角色
+  的方法定义了基本的功能。它还保存了 Implementor 角色的实例。
+
+- RefinedAbstraction
+  + CountDisplay，在 Abstraction 角色的基础上增加了新功能的角色。
+
+- Implementor
+  + DisplayImpl，该角色位于『类的实现层次结构』的最上层。它定义了用于实现 Abstraction
+  角色方法的 API。
+
+- ConcreteImplementor
+  + StringDisplayImpl，该角色负责实现在 Implementor 角色中定义的 API。
+end legend
+
+@enduml

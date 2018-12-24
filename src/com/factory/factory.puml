@@ -1,6 +1,6 @@
 @startuml
-title factory pattern
 
+title factory pattern
 
 abstract class Factory
 abstract class Product

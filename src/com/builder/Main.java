@@ -1,10 +1,10 @@
 package com.builder;
 
 /**
- * Main 类是 Builder 模式的测试程序。我们可以使用如下的命令来编写相应格式的文档:
+ * PracticeMain 类是 Builder 模式的测试程序。我们可以使用如下的命令来编写相应格式的文档:
  * <p>
- * > java Main plain 编写纯文本文档
- * > java Main html 编写 HTML 格式的文档
+ * > java PracticeMain plain 编写纯文本文档
+ * > java PracticeMain html 编写 HTML 格式的文档
  *
  * @author hf huminxi2017@gmail.com
  * @version on 2018/12/17 14:44
