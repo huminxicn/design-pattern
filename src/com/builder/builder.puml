@@ -1,6 +1,6 @@
 @startuml
 
-title builder pattern
+title com pattern
 
 class Director
 abstract class Builder

@@ -5,7 +5,7 @@ import com.factory.framework.Product;
 import com.factory.idcard.IDCardFactory;
 
 /**
- * 在 PracticeMain 类中，我们将使用 framework 包和 idcard/television 包类制作和使用 Product 的子类产品。
+ * 在 Main 类中，我们将使用 framework 包和 idcard/television 包类制作和使用 Product 的子类产品。
  *
  * @author hf huminxi2017@gmail.com
  * @version on 2018/12/11 14:55

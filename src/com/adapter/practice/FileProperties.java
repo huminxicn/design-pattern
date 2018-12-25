@@ -14,13 +14,13 @@ import java.util.Properties;
 public class FileProperties extends Properties implements FileIO {
 
     @Override
-    public void readFromFile(String filename) throws IOException {
-        this.load(new FileInputStream(filename));
+    public void readFromFile(String fileName) throws IOException {
+        this.load(new FileInputStream(fileName));
     }
 
     @Override
-    public void writeToFile(String filename) throws IOException {
-        this.store(new FileOutputStream(filename), "written by FileProperties");
+    public void writeToFile(String fileName) throws IOException {
+        this.store(new FileOutputStream(fileName), "written by FileProperties");
 
     }
 

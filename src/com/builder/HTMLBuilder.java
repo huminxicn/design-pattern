@@ -11,14 +11,14 @@ import java.io.PrintWriter;
  * @version on 2018/12/17 14:32
  */
 public class HTMLBuilder extends Builder {
-    private String filename;
+    private String fileName;
     private PrintWriter writer;
 
     @Override
     public void makeTitle(String title) {
-        filename = title + ".html";
+        fileName = title + ".html";
         try {
-            writer = new PrintWriter(new FileWriter(filename));
+            writer = new PrintWriter(new FileWriter(fileName));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -47,6 +47,6 @@ public class HTMLBuilder extends Builder {
     }
 
     public String getResult() {
-        return filename;
+        return fileName;
     }
 }
