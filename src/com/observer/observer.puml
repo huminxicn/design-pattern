@@ -1,0 +1,35 @@
+@startuml
+title observer pattern
+
+interface Observer
+interface Subject
+
+class WeatherData
+class FullConditionsDisplay
+class PartConditionsDisplay
+
+Observer -> Subject:register
+Subject <|.. WeatherData
+Observer <|.. FullConditionsDisplay
+Observer <|.. PartConditionsDisplay
+
+Observer : update()
+Subject : addObserver()
+Subject : removeObserver()
+Subject : notifyObservers()
+FullConditionsDisplay : weatherData
+PartConditionsDisplay : weatherData
+WeatherData : observers
+
+legend
+
+主要登场角色：
+
+- Subject
+  + 主题，拥有一个观察者列表。当主题内容发生变化时，通知列表中的所有观察者。
+- Observer
+  + 观察者，需要将自己注册到 Subject 维护的观察者列表中。
+
+end legend
+
+@enduml

@@ -1,19 +1,19 @@
 package com.observer;
 
 /**
- * 一句话概括功能
+ * 展示部分天气数据。(温度和湿度)
  *
  * @author huminxi https://github.com/huminxicn
  * @version on 2019/2/12 09:01
  */
-public class CurrentConditionsDisplay implements Observer, DisplayElement {
+public class PartConditionsDisplay implements Observer, DisplayElement {
     private float temperature;
     private float humidity;
     private Subject weatherData;
 
-    public CurrentConditionsDisplay(Subject weatherData) {
+    public PartConditionsDisplay(Subject weatherData) {
         this.weatherData = weatherData;
-        weatherData.registerObserver(this);
+        weatherData.addObserver(this);
     }
 
     @Override
@@ -25,6 +25,6 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement {
 
     @Override
     public void display() {
-        System.out.println("Current conditions:" + temperature + "F degrees and " + humidity + "% humidity.");
+        System.out.println("part conditions:" + temperature + "F degrees and " + humidity + "% humidity.");
     }
 }

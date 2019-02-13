@@ -1,7 +1,7 @@
 package com.observer;
 
 /**
- * 一句话概括功能
+ * 展示接口
  *
  * @author huminxi https://github.com/huminxicn
  * @version on 2019/2/11 17:16

@@ -9,7 +9,6 @@ import java.util.ArrayList;
  * @version on 2019/2/12 08:53
  */
 public class WeatherData implements Subject {
-
     private ArrayList<Observer> observers;
     private float temperature;
     private float humidity;
@@ -20,7 +19,7 @@ public class WeatherData implements Subject {
     }
 
     @Override
-    public void registerObserver(Observer o) {
+    public void addObserver(Observer o) {
         observers.add(o);
     }
 

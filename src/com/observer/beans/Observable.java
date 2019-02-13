@@ -5,7 +5,7 @@ import java.beans.PropertyChangeSupport;
 
 /**
  * Observable PropertyChangeSupport
- * Observer PropertyChangeListener
+ * Observer   PropertyChangeListener
  *
  * @author huminxi https://github.com/huminxicn
  * @version on 2019/2/12 14:05

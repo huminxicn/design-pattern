@@ -1,20 +1,20 @@
 package com.observer;
 
 /**
- * 一句话概括功能
+ * 展示全部的天气数据。
  *
  * @author huminxi https://github.com/huminxicn
  * @version on 2019/2/12 09:10
  */
-public class StatisticsDisplay implements Observer, DisplayElement {
+public class FullConditionsDisplay implements Observer, DisplayElement {
     private float temperature;
     private float humidity;
     private float pressure;
     private Subject weatherData;
 
-    public StatisticsDisplay(Subject weatherData) {
+    public FullConditionsDisplay(Subject weatherData) {
         this.weatherData = weatherData;
-        weatherData.registerObserver(this);
+        weatherData.addObserver(this);
     }
 
     @Override
@@ -27,7 +27,7 @@ public class StatisticsDisplay implements Observer, DisplayElement {
 
     @Override
     public void display() {
-        System.out.println("This is statistics weather data: temperature:" + temperature
+        System.out.println("full conditions: temperature:" + temperature
                 + "\t humidity:" + humidity + "\t pressure:" + pressure);
     }
 }
