@@ -1,7 +1,7 @@
 package com.observer;
 
 /**
- * 一句话概括功能
+ * 测试类
  *
  * @author huminxi https://github.com/huminxicn
  * @version on 2019/2/12 09:08
