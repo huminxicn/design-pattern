@@ -1,8 +1,4 @@
-package com;
-
-import com.observer.FullConditionsDisplay;
-import com.observer.PartConditionsDisplay;
-import com.observer.WeatherData;
+package com.observer;
 
 /**
  * 测试类

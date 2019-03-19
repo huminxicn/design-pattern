@@ -1,4 +1,4 @@
-package com;
+package com.observer;
 
 import com.observer.Observer;
 

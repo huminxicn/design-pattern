@@ -1,7 +1,5 @@
 package com.observer;
 
-import com.Subject;
-
 /**
  * 展示全部的天气数据。
  *

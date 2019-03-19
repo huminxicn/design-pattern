@@ -1,7 +1,5 @@
 package com.observer;
 
-import com.Subject;
-
 import java.util.ArrayList;
 
 /**

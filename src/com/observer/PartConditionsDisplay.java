@@ -1,7 +1,5 @@
 package com.observer;
 
-import com.Subject;
-
 /**
  * 展示部分天气数据。(温度和湿度)
  *
