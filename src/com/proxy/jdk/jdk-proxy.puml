@@ -1,0 +1,41 @@
+@startuml
+title JDK 动态代理
+
+interface Subject
+
+class RealSubject
+class JDKProxy
+class Client
+
+Subject <|-- RealSubject
+JDKProxy <.. Client
+RealSubject <.. Client
+
+
+Subject : action()
+RealSubject : action()
+JDKProxy : realSubject
+JDKProxy : getProxyInstance()
+
+Client : RealSubject target = new RealSubject()
+Client : Subject proxyInstance = (Subject) new JDKProxy(target).getProxyInstance()
+Client : proxyInstance.action()
+
+
+
+legend
+
+主要登场角色：
+
+- Subject
+  + 一个接口，用于一个 action 方法。
+- RealSubject
+  + 实现了 Subject 接口，拥有实际要执行的 action 方法。
+- JDKProxy
+  + 通过 JDK 提供的 api 动态生成代理类。
+- Client
+  + 客户端，通过代理对象 proxy 执行 action 方法。
+
+end legend
+
+@enduml

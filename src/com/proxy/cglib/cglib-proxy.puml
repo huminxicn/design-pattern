@@ -1,0 +1,41 @@
+@startuml
+title cglib 动态代理
+
+interface MethodInterceptor
+
+class RealSubject
+class CglibProxy
+class Client
+
+MethodInterceptor <|-- CglibProxy
+CglibProxy <.. Client
+RealSubject <.. Client
+
+
+RealSubject : action()
+CglibProxy : realSubject
+CglibProxy : getProxyInstance()
+CglibProxy : intercept()
+
+Client : RealSubject target = new RealSubject()
+Client : RealSubject proxyInstance = (RealSubject) new JDKProxy(target).getProxyInstance()
+Client : proxyInstance.action()
+
+
+
+legend
+
+主要登场角色：
+
+- MethodInterceptor
+  + 一个接口，类比 JDK 动态代理中的 InvocationHandler。
+- RealSubject
+  + 拥有实际要执行的 action 方法。
+- CglibProxy
+  + 通过 cglib 提供的 api 动态生成代理类。
+- Client
+  + 客户端，通过代理对象 proxy 执行 action 方法。
+
+end legend
+
+@enduml

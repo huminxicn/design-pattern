@@ -1,0 +1,40 @@
+@startuml
+title 代理模式
+
+interface Subject
+
+class RealSubject
+class Proxy
+class Client
+
+Subject <|-- Proxy
+Subject <|-- RealSubject
+Proxy <.. Client
+RealSubject <.. Client
+
+
+Subject : action()
+RealSubject : action()
+Proxy : realSubject
+Proxy : action()
+Client : RealSubject target = new RealSubject()
+Client : Proxy proxy = new Proxy(target)
+Client : proxy.action() //执行代理对象中的 action 方法
+
+
+legend
+
+主要登场角色：
+
+- Subject
+  + 一个接口，用于一个 action 方法。
+- RealSubject
+  + 实现了 Subject 接口，拥有实际要执行的 action 方法。
+- Proxy
+  + 实现了 Subject 接口，代理 RealSubject 对象执行 action 方法。
+- Client
+  + 客户端，通过代理对象 proxy 执行 action 方法。
+
+end legend
+
+@enduml
