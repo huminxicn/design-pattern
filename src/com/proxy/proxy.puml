@@ -27,7 +27,7 @@ legend
 主要登场角色：
 
 - Subject
-  + 一个接口，用于一个 action 方法。
+  + 一个接口，拥有一个 action 方法。
 - RealSubject
   + 实现了 Subject 接口，拥有实际要执行的 action 方法。
 - Proxy
