@@ -1,16 +1,18 @@
 package com.proxy.cglib;
 
 import com.proxy.RealSubject;
-import com.proxy.Subject;
+import net.sf.cglib.core.DebuggingClassWriter;
 
 /**
  * 一句话概括功能。
  *
- * @author huminxi huminxi@shein.com
  * @since 2021/07/04 18:22
  */
 public class Client {
     public static void main(String[] args) {
+        //0.将生成的代理类输入到 cglib 目录中。
+        System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, "./cglib");
+
         //1.创建目标对象
         RealSubject target = new RealSubject();
 

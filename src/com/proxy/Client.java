@@ -3,7 +3,6 @@ package com.proxy;
 /**
  * 静态代理。
  *
- * @author huminxi huminxi@shein.com
  * @since 2021/07/04 16:58
  */
 public class Client {

@@ -14,7 +14,6 @@ import java.lang.reflect.Proxy;
 /**
  * 一句话概括功能。
  *
- * @author huminxi huminxi@shein.com
  * @since 2021/07/04 17:20
  */
 public class JDKProxy {

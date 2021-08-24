@@ -1,5 +1,6 @@
 package com.proxy.cglib;
 
+import com.proxy.RealSubject;
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
@@ -9,7 +10,7 @@ import java.lang.reflect.Method;
 /**
  * 一句话概括功能。
  *
- * @author huminxi huminxi@shein.com
+ * @author huminxi
  * @since 2021/07/04 18:20
  */
 public class CglibProxy implements MethodInterceptor {
@@ -34,7 +35,10 @@ public class CglibProxy implements MethodInterceptor {
 
     //重写intercept方法，会调用目标对象的方法
     @Override
-    public Object intercept(Object o, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
+    public Object intercept(Object proxy, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
+        //生成的代理类已经继承了 RealSubject 类。
+        System.out.println("proxy instanceof RealSubject: " + (proxy instanceof RealSubject));
+
         System.out.println("cglib 动态代理开始");
         Object returnVal = method.invoke(target, args);
         System.out.println("cglib 动态代理结束");

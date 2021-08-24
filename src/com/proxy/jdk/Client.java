@@ -6,7 +6,6 @@ import com.proxy.Subject;
 /**
  * 一句话概括功能。
  *
- * @author huminxi huminxi@shein.com
  * @since 2021/07/04 17:25
  */
 public class Client {
